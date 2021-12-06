@@ -25,7 +25,7 @@
             $urltext="";
         }
         if(isset($_POST['desc'])){
-            $desctext=$_POST['desc'];
+            $desctext=md5($_POST['desc']);
         }else{
             $desctext="";
         }
