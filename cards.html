@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #555555;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .textblock {
+            width: 50%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(172, 163, 134);
+            background: rgba(0, 0, 0, .1);
+            padding: 3em;
+        }
+        
+        p {
+            font-size: 1.1em;
+            margin-bottom: 0.5em;
+        }
+        
+        h2 {
+            color: #aaa;
+        }
+        
+        .cont {
+            width: 50%;
+            padding-top: 3em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, .1);
+        }
+        
+        .card {
+            position: relative;
+            left: -80px;
+            width: 200px;
+            height: 300px;
+            background: rgb(43, 43, 43);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            perspective: 1000;
+            padding: 0;
+            margin-right: -150px;
+            transition: all 0.5s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+        
+        .flex_col_center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font: 24px/1.5 'Open Sans', sans-serif;
+            color: rgb(143, 143, 143);
+            transform-origin: 0 0;
+            transform: rotate(-90deg);
+            transition: all 0.5s;
+        }
+        
+        img {
+            position: absolute;
+            bottom: 0px;
+            left: 120%;
+            height: calc(100% - 20px);
+            margin: 10px;
+            transition: all 0.5s;
+        }
+        
+        .card:hover {
+            margin-right: -20px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card:hover h1 {
+            transform: rotate(0deg);
+            background: rgba(0, 0, 0, 0.5);
+            bottom: calc(100% - 50px - 24px);
+            left: 0px;
+            padding: 5px 1em;
+            color: #fff;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-left: 0px solid transparent;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+        
+        .card:hover img {
+            left: 0;
+        }
+        
+        .card:last-child:hover {
+            margin-right: -150px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="card">
+            <img src="https://picsum.photos/180/150" alt="Picture">
+            <h1>Card one</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/181/150" alt="Picture">
+            <h1>Card two</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/182/150" alt="Picture">
+            <h1>Card three</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/183/150" alt="Picture">
+            <h1>Card four</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/184/150" alt="Picture">
+            <h1>Card five</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/185/150" alt="Picture">
+            <h1>Card six</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/186/150" alt="Picture">
+            <h1>Card seven</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/187/150" alt="Picture">
+            <h1>Card eight</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/188/150" alt="Picture">
+            <h1>Card nine</h1>
+
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/189/150" alt="Picture">
+            <h1>Card ten</h1>
+
+        </div>
+    </div>
+    <div class="textblock">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla explicabo aperiam doloremque mollitia rerum nemo dicta placeat iure, est similique assumenda voluptatem! Rerum quisquam quam voluptates quos cum! Consectetur, corrupti tenetur aperiam
+            repellendus officiis officia a. Natus illum, animi, non numquam neque dolorem molestias in nesciunt commodi voluptate corporis voluptas voluptates, esse fugiat minima aperiam. Tempore quibusdam optio quos velit veritatis esse? Sunt autem aperiam
+            obcaecati, voluptate harum, ratione dolor totam, voluptatem exercitationem sequi sapiente corrupti omnis esse veritatis tempore.</p>
+        <p>Blanditiis nobis dolor ipsa quod. Perspiciatis aspernatur quia harum, odio voluptates nisi velit dolores magni minus, voluptas maxime inventore quae modi assumenda quam ea quos earum eveniet. Itaque, assumenda dolorum? Recusandae sapiente cumque
+            id pariatur delectus labore laudantium inventore aspernatur voluptas ipsa, aperiam illo ipsam porro? Suscipit sunt veniam dolorem natus. Inventore perspiciatis odit cum saepe alias dolorum molestiae eaque. Minus error excepturi vel vitae,
+            aut omnis nisi esse eum reprehenderit exercitationem sit nobis eos ratione quae molestias accusantium ex.</p>
+        <p>Molestias sit, reprehenderit velit deserunt dolorem ab dignissimos incidunt cum amet sint soluta nobis recusandae officiis tenetur et quidem quo explicabo quasi, distinctio exercitationem odit maxime! Quibusdam quaerat eveniet eaque qui possimus
+            consectetur dolores earum, ipsam commodi laboriosam beatae cum cumque sit necessitatibus aliquid sapiente fugit sed optio? Quaerat, tempore. Quod commodi consequatur ipsum aspernatur cum? Expedita iusto aut reprehenderit at deserunt aspernatur.
+            Expedita id soluta delectus obcaecati. Molestiae beatae necessitatibus nostrum natus itaque sit debitis a suscipit ipsa neque?</p>
+    </div>
+</body>
+
+</html>

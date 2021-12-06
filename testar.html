@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .steel {
+            position: absolute;
+            background: steelblue;
+            width: 200px;
+            height: 150px;
+            margin: 3em;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        
+        .moveRight {
+            left: calc(100% - 6em - 200px);
+            background: red;
+        }
+        
+        .moveLeft {
+            left: 0;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let bob = document.createElement("div");
+        document.body.appendChild(bob);
+        bob.classList.add("steel");
+        bob.classList.add("moveLeft");
+
+        bob.addEventListener("click", function() {
+            bob.classList.toggle("moveLeft");
+            bob.classList.toggle("moveRight");
+        });
+
+
+
+    });
+</script>
