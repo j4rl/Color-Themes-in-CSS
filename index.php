@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <?php require_once("prog.php"); ?>
 <html lang="en">
@@ -8,31 +9,50 @@
 </head>
 <body>
 <?php
+    $host="localhost";
+    $user="root";
+    $pass="";
+    $db="petter";
+    $conn=mysqli_connect($host,$user,$pass,$db);
+
+
+
+
     if(isset($_POST['btn'])){
-        if(isset($_POST['temp'])){
-            $htext=$_POST['temp'];
+        if(isset($_POST['url'])){
+            $urltext=$_POST['url'];
         }else{
-            $htext="";
+            $urltext="";
         }
-        if(isset($_POST['ord'])){
-            $ord=$_POST['ord'];
+        if(isset($_POST['desc'])){
+            $desctext=$_POST['desc'];
         }else{
-            $ord="";
+            $desctext="";
         }
-        $htext=$htext." ".$ord;
+        $link="<a href='".$urltext."'>".$desctext."</a>";
+        $sql="INSERT INTO tblLinx (txturl, txtdesc) VALUES ('$urltext', '$desctext')";
+        $result=mysqli_query($conn,$sql);
+
     }else{
-        $htext="";
-        $ord="";
+        $link="";
     }
 
 ?>
     <form action="index.php" method="POST">
-        <input type="text" name="ord" placeholder="Skriv något...">
-        <input type="hidden" name="temp" value="<?=$htext?>">
+        <input type="url" name="url" placeholder="https://" required>
+        <input type="text" name="desc" placeholder="Skriv något om länken..." required>
         <input type="submit" name="btn" value="Skicka">
     </form>
 
-    <h1><?=$htext?></h1>
+    <?php
+        $sql="SELECT * FROM tblLinx";
+        $result=mysqli_query($conn,$sql);
+        while($row=mysqli_fetch_assoc($result)){
+            echo "<p>".$row['id']." <a href='".$row['txturl']."'>".$row['txtdesc']."</a> ".$row['status']."</p>";
+        }
+        mysqli_close($conn);
+    ?>
+    
 
 </body>
 </html>
