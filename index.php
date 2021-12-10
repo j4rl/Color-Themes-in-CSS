@@ -9,33 +9,17 @@
 </head>
 <body>
 <?php
-    $host="localhost";
-    $user="root";
-    $pass="";
-    $db="petter";
-    $conn=mysqli_connect($host,$user,$pass,$db);
-
-
-
-
-    if(isset($_POST['btn'])){
-        if(isset($_POST['url'])){
-            $urltext=$_POST['url'];
-        }else{
-            $urltext="";
-        }
-        if(isset($_POST['desc'])){
-            $desctext=md5($_POST['desc']);
-        }else{
-            $desctext="";
-        }
-        $link="<a href='".$urltext."'>".$desctext."</a>";
-        $sql="INSERT INTO tblLinx (txturl, txtdesc) VALUES ('$urltext', '$desctext')";
-        $result=mysqli_query($conn,$sql);
-
-    }else{
-        $link="";
-    }
+  $host="localhost";
+  $user="root";
+  $pass="";
+  $db="petter";
+  $conn=mysqli_connect($host,$user,$pass,$db);
+  if(isset($_POST['btn'])){
+       $url = $_POST['url'];
+       $desc = $_POST['desc'];
+       $sql="INSERT INTO tblLinx (txturl, txtdesc) VALUES ('$url', '$desc')";
+       $result=mysqli_query($conn,$sql);
+  }
 
 ?>
     <form action="index.php" method="POST">
@@ -44,14 +28,15 @@
         <input type="submit" name="btn" value="Skicka">
     </form>
 
-    <?php
-        $sql="SELECT * FROM tblLinx";
-        $result=mysqli_query($conn,$sql);
-        while($row=mysqli_fetch_assoc($result)){
-            echo "<p>".$row['id']." <a href='".$row['txturl']."'>".$row['txtdesc']."</a> ".$row['status']."</p>";
-        }
-        mysqli_close($conn);
-    ?>
+<?php
+    $sql="SELECT * FROM tblLinx";
+    $result=mysqli_query($conn, $sql);
+    while($row=mysqli_fetch_assoc($result)){
+        echo "<p><a href='".$row['txturl']."'>".$row['txtdesc']."<a></p>";
+    }
+
+
+?>
     
 
 </body>
