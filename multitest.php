@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>multitest</title>
+    <link rel="stylesheet" href="ktm.css">
 </head>
 <?php
 $host="localhost";
