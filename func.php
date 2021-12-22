@@ -20,6 +20,17 @@
     }
 }
 
-
+function getArticle($strHeader, $strBy){
+    $intRand=rand(3,5);
+    $ret="";
+    $ret=$ret."<article>";
+    $ret=$ret."<h1>".$strHeader."</h1>";
+    $ret=$ret."<p>".file_get_contents('https://loripsum.net/api/1/short')."</p>";
+    $ret=$ret."<p>";
+    $ret=$ret.file_get_contents('https://loripsum.net/api/'.$intRand.'/short')."</p>";
+    $ret=$ret."<div class='byline'>by ".$strBy."</div>";
+    $ret=$ret."</article>";
+    return $ret;
+}
 
 ?>
