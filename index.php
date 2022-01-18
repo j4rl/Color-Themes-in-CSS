@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">☢️</div></div><div class="logotext">Logotvpe</div>
+        <div class="logo"></div></div><div class="logotext">Logotvpe</div>
     </header>
     <nav>
         <?php require_once '_nav.php'; ?>
@@ -22,8 +22,10 @@
             <?=getArticle('My name is...', 'Slim Shady')?>
             <?=getArticle('Nisses dilemma', 'Petter')?>
             <?=getArticle('More coffee?', 'Betty')?>
+            <?=getArticle('I\'m a teapot', 'Kermit')?>
             <?=getArticle('Where is the manager?', 'Karen')?>
             <?=getArticle('Sick days', 'Ola')?>
+            <?=getArticle('I\'m a bit of a party animal', 'Kurt')?>
         </section>
     </div>
     <footer>

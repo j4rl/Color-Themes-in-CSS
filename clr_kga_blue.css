@@ -1,8 +1,7 @@
-:root{
-    --clr_primary:#5863c7;
-    --clr_secondary_dark:#362e7d;
-    --clr_secondary_light:#91a9ff;
-    --clr_tint1:#dbdef4;
-    --clr_tint2:#eff2ff;
-
+:root {
+    --clr_primary: #5863c7;
+    --clr_secondary_dark: #362e7d;
+    --clr_secondary_light: #91a9ff;
+    --clr_tint1: #dbdef4;
+    --clr_tint2: #eff2ff;
 }
