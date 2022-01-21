@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="dolce.css" rel="stylesheet" type="text/css">
-    <?php require_once("php.php"); ?>
-    <?php $db=new Database("localhost","root","","dbsdata"); ?>
     <?php
     session_start();
     $_SESSION['loggedin']=0;
