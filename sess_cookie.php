@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="dolce.css" rel="stylesheet" type="text/css">
+    <link href="ktm.css" rel="stylesheet" type="text/css">
     <?php
     session_start();
     $_SESSION['loggedin']=0;
@@ -12,17 +12,17 @@
 
     $user="Arne";
     $pass="P455w0rd";
-    if($user=="Arne" AND $pass=="P4550rd"){
+    if($user=="Arne" AND $pass=="P455w0rd"){
         echo "Inloggad";
         $_SESSION['loggedin']=1;
         $_SESSION['user']=$user;
-        setcookie("user",$user,time() + (86400 * 30),"/");
+        $_COOKIE['user']=$user;
 
     }else{
         echo "Fail!";
         $_SESSION['loggedin']=0;
         $_SESSION['user']="";
-        setcookie("user","",0,"/");
+        $_COOKIE['user']="";
     }
     ?>
 </head>
