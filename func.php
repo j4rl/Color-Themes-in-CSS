@@ -21,7 +21,7 @@
 }
 
 function getArticle($strHeader, $strBy){
-    $intRand=rand(3,5);
+    $intRand=rand(2,5);
     $ret="";
     $ret=$ret."<article>";
     $ret=$ret."<h1>".$strHeader."</h1>";

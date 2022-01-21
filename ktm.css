@@ -9,10 +9,12 @@
 .logo {
     width: 2rem;
     height: 2rem;
+    color: var(--clr_accent);
 }
 
 .logo_text {
     padding: 0 0 0 2rem;
+    color: var(--clr_accent);
 }
 
 header {

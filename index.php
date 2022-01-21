@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"></div></div><div class="logotext">Logotvpe</div>
+        <div class="logo">⁂</div></div><div class="logo_text">Logotvpe</div>
     </header>
     <nav>
         <?php require_once '_nav.php'; ?>
